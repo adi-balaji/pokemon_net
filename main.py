@@ -20,7 +20,7 @@ predictor = PokemonTypePredictor(pokemon_dataset, net)
 predictor.train_neural_net() #saves model as 'pokemon_net.pth'
 net.load_state_dict(torch.load('pokemon_net.pth'))
 
-test_pkmn = ['charmander','squirtle', 'bulbasaur', 'cyndaquil', 'totodile', 'chikorita','mudkip','torchic','treecko','chimchar','turtwig','piplup','tepig','oshawott','snivy','fennekin','froakie','chespin','litten','popplio','rowlet','scorbunny','sobble','grookey','fuecoco','quaxly','sprigatito']
+test_pkmn = ['centiskorch','avalugg','croagunk','flygon','butterfree','alakazam']
 for p in test_pkmn:
     predictor.predict_pokemon_type(p)
 
