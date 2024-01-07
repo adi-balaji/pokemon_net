@@ -16,22 +16,25 @@ class PokemonTypePredictor:
         neural_net.train()
 
     def predict_pokemon_type(self, pkmn_name):
-        pkmn_id = pb.APIResource('pokemon', pkmn_name).id
-        sprite_url = pb.SpriteResource('pokemon', pkmn_id).url
-        response = requests.get(sprite_url)
-        image = Image.open(BytesIO(response.content)).convert('RGB')
-        to_tensor = transforms.ToTensor()
-        image_tensor = to_tensor(image)
-        with torch.no_grad():
-            energies = self.net(image_tensor)
-        pred = None
-        for k,v in self.dataset.classes_to_int.items():
-            if v == torch.argmax(energies):
-                pred = k
+        try:
+            pkmn_id = pb.APIResource('pokemon', pkmn_name).id
+            sprite_url = pb.SpriteResource('pokemon', pkmn_id).url
+            response = requests.get(sprite_url)
+            image = Image.open(BytesIO(response.content)).convert('RGB')
+            to_tensor = transforms.ToTensor()
+            image_tensor = to_tensor(image)
+            with torch.no_grad():
+                energies = self.net(image_tensor)
+            pred = None
+            for k,v in self.dataset.classes_to_int.items():
+                if v == torch.argmax(energies):
+                    pred = k
 
-        plt.imshow(image)
-        plt.title(f'{pb.APIResource("pokemon", pkmn_id).name} is {pred} type.')
-        plt.show()
+            plt.imshow(image)
+            plt.title(f'{pb.APIResource("pokemon", pkmn_id).name} is {pred} type.')
+            plt.show()
+        except:
+            print(f'Could not find pokemon {pkmn_name}..')
 
     def predict_image_type(self, path):
         image = Image.open(path).convert('RGB')

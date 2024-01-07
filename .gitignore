@@ -1,4 +1,7 @@
 # github_assets/
+pkmn_images/
+pkmn_types.txt
+pokemon_net.pth
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

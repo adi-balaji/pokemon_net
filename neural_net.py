@@ -74,9 +74,8 @@ def train():
     #------------------------ HYPERPARAMETERS ----------------------------------#
 
     batch_size = 32
-    number_of_epochs = 7
+    number_of_epochs = 20
     learning_rate = 0.001
-    optimizer = optim.Adam(net.parameters(), lr=learning_rate)
 
     #------------------------ END HYPERPARAMETERS ------------------------------#
 
@@ -97,7 +96,7 @@ def train():
     net = PokemonNet(len(types))
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optimizer
+    optimizer = optim.Adam(net.parameters(), lr=learning_rate)
 
     losses = []
 

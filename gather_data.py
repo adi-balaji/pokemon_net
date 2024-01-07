@@ -39,8 +39,8 @@ def download_pkmn_img_flipped(path):
 
 
 # Gather data in batches, may crash due to heap overflow. Start with 1-300, then 300-500, and so on..
-bottom = 1
-top = 300
+bottom = 800
+top = 1000
 image_dir = 'pkmn_images'
 os.makedirs(image_dir, exist_ok=True)
 pokemon_ids = list(range(bottom,top))
