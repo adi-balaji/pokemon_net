@@ -1,6 +1,8 @@
 # pokemon_net
 
-A neural network project designed to predict the type of any given Pokemon. This project was undertaken as a practical approach to learning PyTorch and deep learning concepts, with the added fun of predicting Pokemon types.
+#### Have you ever wondered what your pokemon type is? Perhaps you have wondered what your pet's type would be? PokemonNet offers an AI model that can predict the pokemon type of anything given just a picture!
+
+PokemonNet neural network project designed to predict the type of any given Pokemon. This project was undertaken as a practical approach to learning PyTorch and deep learning concepts, with the added fun of using Pokemon as a theme. The project contains an all encapsulating PokemonPredictor that provides an intuitive way to simply download images, train a neural network and test out predictions on pokemon images, or your own images. The maximum accuracy PokemonNet achieved was about 56.6%; random chance is about 5.56%, indicating that the model has really learned to discern pokemon type through image features. Please contact me if you have any questions!
 
 ## Project Overview
 
