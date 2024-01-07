@@ -30,7 +30,7 @@ class PokemonTypePredictor:
                 pred = k
 
         plt.imshow(image)
-        plt.title(f'Prediction: {pb.APIResource("pokemon", pkmn_id).name} is {pred} type.')
+        plt.title(f'{pb.APIResource("pokemon", pkmn_id).name} is {pred} type.')
         plt.show()
 
     def predict_image_type(self, path):
