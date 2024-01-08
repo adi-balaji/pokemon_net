@@ -13,6 +13,10 @@ Below are examples showcasing the Pokemon Net in action:
 | Sprigatito | Fuecoco |
 | --- | --- |
 | ![sprig](github_assets/sprigatito.png) | ![fuec](github_assets/fuecoco.png) |
+
+| Eternatus | Maushold |
+| --- | --- |
+| ![pkmnname](github_assets/eternatus.png) | ![mshld](github_assets/maushold.png) |
 <br>
 Ever wondered what pokemon type you'd be? You can run the model on a picture of you too! Here's the pokemon type of Bear:
 <br>
