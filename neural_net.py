@@ -74,7 +74,7 @@ def train():
     #------------------------ HYPERPARAMETERS ----------------------------------#
 
     batch_size = 32
-    number_of_epochs = 20
+    number_of_epochs = 14
     learning_rate = 0.001
 
     #------------------------ END HYPERPARAMETERS ------------------------------#

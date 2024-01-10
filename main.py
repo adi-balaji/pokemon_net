@@ -21,7 +21,6 @@ predictor = PokemonTypePredictor(pokemon_dataset, net)
 # predictor.train_neural_net() #saves model as 'pokemon_net.pth'
 net.load_state_dict(torch.load('pokemon_net.pth'))
 
-test_pkmn = ['centiskorch','avalugg','croagunk','flygon','butterfree','alakazam', 'florgato', 'quaquaval']
+test_pkmn = ['centiskorch','avalugg','croagunk','flygon','butterfree','alakazam', 'floragato', 'quaquaval']
 for p in test_pkmn:
     predictor.predict_pokemon_type(p)
-
